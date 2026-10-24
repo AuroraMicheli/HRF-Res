@@ -1,0 +1,11 @@
+data/
+outputs/
+logs/
+*.out
+*.err
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+.vscode/
