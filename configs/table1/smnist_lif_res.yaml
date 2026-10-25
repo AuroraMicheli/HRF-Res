@@ -1,0 +1,20 @@
+# Table 1: sMNIST, LIF-Res (paper: 67.00 +/- 1.04)
+dataset: smnist
+model: lif_res
+n_hid: 800
+dt: 0.034
+tau_m: 36.19
+tau_m_range: 3.6
+theta_res: 0.00254
+theta_res_range: 0.0118
+rho: 0.976
+input_scaling: 0.8471
+theta_lif: 0.1507
+connectivity_lif2res: 0.2
+connectivity_res2lif: 1.0
+readout_mode: final
+readout_C: 0.01
+batch_train: 128
+batch_test: 100
+seed: 42
+n_trials: 5

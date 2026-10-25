@@ -1,0 +1,23 @@
+# Fig. 4: readout ablation on SHD, HRF-Res
+dataset: shd
+model: hrf_res
+n_hid: 3000
+dt: 0.223
+gamma: 0.036
+gamma_range: 0.268
+epsilon: 0.06
+epsilon_range: 0.063
+rho: 1.16
+input_scaling: 0.23
+theta_lif: 1.0
+theta_hrf: 0.013
+connectivity_lif2hrf: 0.2
+connectivity_hrf2lif: 1.0
+input_density: 0.036
+num_steps: 250
+readout_modes: [final, mean, rms, std, rms_std_final, spikes_mean]
+readout_C: 0.01
+batch_train: 128
+batch_test: 256
+seed: 42
+n_trials: 5

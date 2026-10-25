@@ -1,0 +1,22 @@
+# Table 2: psMNIST, HRF-Res (paper: 87.96 +/- 0.33)
+dataset: psmnist
+model: hrf_res
+n_hid: 800
+dt: 0.047
+gamma: 2.62
+gamma_range: 3.84
+epsilon: 0.24
+epsilon_range: 1.86
+rho: 1.55
+input_scaling: 3.67
+theta_lif: 0.05
+theta_hrf: 0.005
+connectivity_lif2hrf: 0.2
+connectivity_hrf2lif: 1.0
+perm_seed: 0
+readout_mode: final
+readout_C: 1.0
+batch_train: 256
+batch_test: 100
+seed: 42
+n_trials: 5

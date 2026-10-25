@@ -1,0 +1,26 @@
+# Table 3: N-MNIST, HRF-Res, N=3600 (paper: 97.13 +/- 0.12)
+dataset: nmnist
+model: hrf_res
+n_hid: 3600
+dt: 0.109212
+gamma: 0.108952
+gamma_range: 0.361568
+epsilon: 0.020766
+epsilon_range: 0.082752
+rho: 1.049373
+input_scaling: 0.209619
+theta_lif: 0.494447
+theta_hrf: 0.058119
+connectivity_lif2hrf: 0.2
+connectivity_hrf2lif: 1.0
+input_density: 0.018269
+num_steps: 30
+spatial_factor: 2
+readout_mode: rms_std_final
+readout_C: 0.05
+readout_solver: liblinear
+readout_max_iter: 1000
+batch_train: 128
+batch_test: 256
+seed: 42
+n_trials: 5

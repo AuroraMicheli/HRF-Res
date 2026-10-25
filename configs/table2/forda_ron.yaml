@@ -1,0 +1,17 @@
+# Table 2: FordA, RON (paper: 73.15 +/- 7.67)
+dataset: forda
+model: ron
+n_hid: 800
+dt: 0.2
+gamma: 1.0
+gamma_range: 1.0
+epsilon: 5.0
+epsilon_range: 10.0
+rho: 0.9
+input_scaling: 0.1
+readout_C: 1.0
+readout_max_iter: 1000
+batch_train: 120
+batch_test: 120
+seed: 42
+n_trials: 5

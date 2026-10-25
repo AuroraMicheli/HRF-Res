@@ -1,0 +1,23 @@
+# Table 1: DVS Gesture, LIF-Res (paper: 73.48 +/- 1.12)
+dataset: dvs_gesture
+model: lif_res
+n_hid: 3000
+dt: 0.056
+tau_m: 58.59
+tau_m_range: 23.17
+theta_res: 0.02224
+theta_res_range: 0.00194
+rho: 0.866
+input_scaling: 0.031
+theta_lif: 0.5327
+connectivity_lif2res: 1.0
+connectivity_res2lif: 1.0
+input_density: 0.0306
+num_steps: 200
+spatial_factor: 4
+readout_mode: final
+readout_C: 0.01
+batch_train: 128
+batch_test: 64
+seed: 42
+n_trials: 5
