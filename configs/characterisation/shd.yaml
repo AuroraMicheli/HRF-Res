@@ -1,0 +1,36 @@
+# Figs. 2-3 and Appendix B: SHD, HRF-Res vs LIF-Res
+dataset: shd
+num_steps: 250
+batch_test: 256
+seeds: [42, 43, 44]
+cka_samples: 500
+sweep:
+  f_min: 0.001
+  f_max: 2.0
+  n_freqs: 30
+  T: 50000
+hrf_res:
+  model: hrf_res
+  n_hid: 3000
+  dt: 0.223
+  gamma: 0.036
+  gamma_range: 0.268
+  epsilon: 0.06
+  epsilon_range: 0.063
+  rho: 1.16
+  input_scaling: 0.23
+  theta_lif: 1.0
+  theta_hrf: 0.013
+  input_density: 0.036
+lif_res:
+  model: lif_res
+  n_hid: 3000
+  dt: 0.084
+  tau_m: 13.01
+  tau_m_range: 2.38
+  theta_res: 0.09598
+  theta_res_range: 0.00375
+  rho: 1.172
+  input_scaling: 0.1962
+  theta_lif: 0.4188
+  input_density: 0.036

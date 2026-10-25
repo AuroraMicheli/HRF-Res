@@ -1,0 +1,33 @@
+# Figs. 2-3 and Appendix B: sMNIST, HRF-Res vs LIF-Res
+dataset: smnist
+batch_test: 100
+seeds: [42, 43, 44]
+cka_samples: 500
+sweep:
+  f_min: 0.01
+  f_max: 2.0
+  n_freqs: 30
+  T: 6000
+hrf_res:
+  model: hrf_res
+  n_hid: 800
+  dt: 0.042
+  gamma: 2.7
+  gamma_range: 2.0
+  epsilon: 0.08
+  epsilon_range: 1.0
+  rho: 0.99
+  input_scaling: 2.0
+  theta_lif: 0.05
+  theta_hrf: 0.005
+lif_res:
+  model: lif_res
+  n_hid: 800
+  dt: 0.034
+  tau_m: 36.19
+  tau_m_range: 3.6
+  theta_res: 0.00254
+  theta_res_range: 0.0118
+  rho: 0.976
+  input_scaling: 0.8471
+  theta_lif: 0.1507

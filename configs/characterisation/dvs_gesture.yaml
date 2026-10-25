@@ -1,0 +1,37 @@
+# Figs. 2-3 and Appendix B: DVS Gesture, HRF-Res vs LIF-Res
+dataset: dvs_gesture
+num_steps: 200
+spatial_factor: 4
+batch_test: 32
+seeds: [42, 43, 44]
+cka_samples: 264
+sweep:
+  f_min: 0.005
+  f_max: 2.0
+  n_freqs: 30
+  T: 10000
+hrf_res:
+  model: hrf_res
+  n_hid: 3000
+  dt: 0.259
+  gamma: 0.0456
+  gamma_range: 0.1304
+  epsilon: 0.0354
+  epsilon_range: 0.0989
+  rho: 1.581
+  input_scaling: 0.1129
+  theta_lif: 2.9678
+  theta_hrf: 0.03628
+  input_density: 0.0306
+lif_res:
+  model: lif_res
+  n_hid: 3000
+  dt: 0.056
+  tau_m: 58.59
+  tau_m_range: 23.17
+  theta_res: 0.02224
+  theta_res_range: 0.00194
+  rho: 0.866
+  input_scaling: 0.031
+  theta_lif: 0.5327
+  input_density: 0.0306

@@ -1,0 +1,33 @@
+# Figs. 2-3 and Appendix B: FordA, HRF-Res vs LIF-Res
+dataset: forda
+batch_test: 120
+seeds: [42, 43, 44]
+cka_samples: 500
+sweep:
+  f_min: 0.01
+  f_max: 2.0
+  n_freqs: 30
+  T: 6000
+hrf_res:
+  model: hrf_res
+  n_hid: 800
+  dt: 0.051
+  gamma: 7.0124
+  gamma_range: 3.01
+  epsilon: 0.1528
+  epsilon_range: 0.419
+  rho: 0.75
+  input_scaling: 0.6247
+  theta_lif: 0.0824
+  theta_hrf: 0.001
+lif_res:
+  model: lif_res
+  n_hid: 800
+  dt: 0.068
+  tau_m: 36.68
+  tau_m_range: 25.85
+  theta_res: 0.15659
+  theta_res_range: 0.01254
+  rho: 0.875
+  input_scaling: 4.0365
+  theta_lif: 0.1458
