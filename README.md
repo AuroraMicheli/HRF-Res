@@ -1,13 +1,27 @@
 # HRF-Res: Frequency-Selective Spiking Reservoirs with Resonant Neurons
 
-Code for "Beyond Low-Pass Dynamics: Frequency-Selective Spiking Reservoirs
-with Resonant Neurons" (A. Micheli, C. Gallicchio, N. Tomen), NeurIPS 2026.
+[![NeurIPS 2026](https://img.shields.io/badge/NeurIPS-2026-4b44ce.svg)](https://neurips.cc/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](requirements.txt)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.7-ee4c2c.svg)](https://pytorch.org/)
+
+Code for **Beyond Low-Pass Dynamics: Frequency-Selective Spiking Reservoirs
+with Resonant Neurons**, Aurora Micheli, Claudio Gallicchio, Nergis Tomen,
+NeurIPS 2026.
 
 HRF-Res is a liquid state machine in which a LIF encoder drives a reservoir of
-Harmonic Resonate-and-Fire (HRF) neurons. All weights are random and fixed;
-only a linear readout is trained. The repository contains the model, the
-LIF-Res and RON baselines, and the configurations behind every result in the
-paper.
+Harmonic Resonate-and-Fire (HRF) neurons. Unlike leaky integrate-and-fire
+neurons, which act as low-pass filters, HRF neurons oscillate and respond
+selectively to input frequencies, so the reservoir behaves like a bank of
+band-pass filters. All weights are random and fixed; only a linear readout is
+trained.
+
+<p align="center">
+  <img src="assets/architecture.png" width="720" alt="HRF-Res architecture">
+</p>
+
+This repository contains the model, the LIF-Res and RON baselines, and the
+configurations behind every result in the paper.
 
 ## Installation
 
@@ -19,6 +33,24 @@ pip install -r requirements.txt
 ```
 
 A CUDA GPU is recommended for the larger reservoirs (N = 3000 and above).
+
+## Quick start
+
+```python
+import torch
+from hrf_res.models import HRFRes
+
+model = HRFRes(n_inp=1, n_hid=800, dt=0.042,
+               gamma=2.7, gamma_range=2.0, epsilon=0.08, epsilon_range=1.0,
+               rho=0.99, input_scaling=2.0, theta_lif=0.05, theta_hrf=0.005,
+               readout_mode="final")
+
+x = torch.rand(32, 784, 1)        # (batch, time steps, input channels)
+features, rates = model(x)        # features: (32, 800); rates: mean firing rates
+```
+
+The features can be fed to any linear classifier; `hrf_res.readout.fit_readout`
+reproduces the logistic-regression readout used in the paper.
 
 ## Data
 
