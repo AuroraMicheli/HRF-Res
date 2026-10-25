@@ -1,0 +1,15 @@
+# Random search for table2/npcifar10_hrf_res.yaml (ranges of the appendix tables)
+base: configs/table2/npcifar10_hrf_res.yaml
+n_configs: 100
+space:
+  connectivity_lif2hrf: {choice: [0.1, 0.2, 0.5, 1.0]}
+  dt: [0.01, 0.2]
+  gamma: [0.01, 2]
+  epsilon: [0.01, 2]
+  gamma_range: [0.1, 2]
+  epsilon_range: [0, 1]
+  input_scaling: [0.001, 0.5]
+  rho: [0.5, 1.5]
+  theta_lif: [0.01, 1]
+  theta_hrf: [0.001, 0.5]
+  readout_C: {choice: [0.001, 0.01, 0.1, 1.0, 10.0]}

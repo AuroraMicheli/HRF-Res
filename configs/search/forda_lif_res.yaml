@@ -1,0 +1,13 @@
+# Random search for table1/forda_lif_res.yaml (ranges of the appendix tables)
+base: configs/table1/forda_lif_res.yaml
+n_configs: 100
+space:
+  dt: [0.02, 0.3]
+  rho: [0.6, 1]
+  input_scaling: [0.3, 5]
+  theta_lif: [0.01, 0.3]
+  tau_m: [10, 80]
+  tau_m_range: [5, 60]
+  theta_res: [0.005, 0.2]
+  theta_res_range: [0.002, 0.15]
+  readout_C: {choice: [0.001, 0.01, 0.1, 1.0, 10.0]}

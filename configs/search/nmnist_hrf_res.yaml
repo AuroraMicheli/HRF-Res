@@ -1,0 +1,11 @@
+# Random search for table3/nmnist.yaml (ranges of the appendix tables)
+base: configs/table3/nmnist.yaml
+n_configs: 100
+space:
+  input_density: [0.01, 0.2]
+  connectivity_lif2hrf: {choice: [0.1, 0.2, 0.5, 1.0]}
+  input_scaling: [0.02, 0.5]
+  rho: [0.8, 1.6]
+  theta_lif: [0.05, 0.5]
+  theta_hrf: [0.01, 0.15]
+  readout_C: {choice: [0.001, 0.005, 0.01, 0.05, 0.1, 0.5]}

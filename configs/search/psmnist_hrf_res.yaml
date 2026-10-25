@@ -1,0 +1,15 @@
+# Random search for table2/psmnist_hrf_res.yaml (ranges of the appendix tables)
+base: configs/table2/psmnist_hrf_res.yaml
+n_configs: 100
+space:
+  connectivity_lif2hrf: {choice: [0.1, 0.2, 0.5, 1.0]}
+  dt: [0.03, 0.15]
+  gamma: [1, 6]
+  epsilon: [0.05, 0.8]
+  gamma_range: [1, 5]
+  epsilon_range: [0.5, 3]
+  input_scaling: [1, 8]
+  rho: [1, 2]
+  theta_lif: [0.01, 0.2]
+  theta_hrf: [0.001, 0.05]
+  readout_C: {choice: [0.001, 0.01, 0.1, 1.0, 10.0]}

@@ -1,0 +1,13 @@
+# Random search for table1/smnist_lif_res.yaml (ranges of the appendix tables)
+base: configs/table1/smnist_lif_res.yaml
+n_configs: 100
+space:
+  dt: [0.03, 0.15]
+  rho: [0.85, 1.05]
+  input_scaling: [0.5, 5]
+  theta_lif: [0.01, 0.2]
+  tau_m: [5, 50]
+  tau_m_range: [3, 40]
+  theta_res: [0.001, 0.05]
+  theta_res_range: [0.001, 0.04]
+  readout_C: {choice: [0.001, 0.01, 0.1, 1.0, 10.0]}

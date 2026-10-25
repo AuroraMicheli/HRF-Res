@@ -1,0 +1,15 @@
+# Random search for table3/fordb.yaml (ranges of the appendix tables)
+base: configs/table3/fordb.yaml
+n_configs: 100
+space:
+  connectivity_lif2hrf: {choice: [0.1, 0.2, 0.5, 1.0]}
+  dt: [0.005, 0.5]
+  gamma: [0.01, 10]
+  epsilon: [0.001, 1]
+  gamma_range: [0.1, 5]
+  epsilon_range: [0, 0.5]
+  input_scaling: [0.01, 10]
+  rho: [0.3, 1.1]
+  theta_lif: [0.005, 1]
+  theta_hrf: [0.0005, 0.5]
+  readout_C: {choice: [0.001, 0.01, 0.1, 1.0, 10.0]}
