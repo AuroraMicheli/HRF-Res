@@ -1,0 +1,22 @@
+# Appendix C: robustness of LIF-Res on FordA
+dataset: forda
+model: lif_res
+n_hid: 800
+dt: 0.068
+tau_m: 36.68
+tau_m_range: 25.85
+theta_res: 0.15659
+theta_res_range: 0.01254
+rho: 0.875
+input_scaling: 4.0365
+theta_lif: 0.1458
+connectivity_lif2res: 0.2
+connectivity_res2lif: 1.0
+readout_mode: final
+readout_C: 0.1
+noise_levels: [0.0, 0.05, 0.1, 0.2, 0.3, 0.5]
+rates: [0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
+batch_train: 120
+batch_test: 120
+seed: 42
+n_trials: 5
