@@ -1,13 +1,14 @@
 # HRF-Res: Frequency-Selective Spiking Reservoirs with Resonant Neurons
 
+[![arXiv](https://img.shields.io/badge/arXiv-2610.37906-b31b1b.svg)](https://arxiv.org/abs/2610.37906)
 [![NeurIPS 2026](https://img.shields.io/badge/NeurIPS-2026-4b44ce.svg)](https://neurips.cc/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](requirements.txt)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.7-ee4c2c.svg)](https://pytorch.org/)
 
-Code for **Beyond Low-Pass Dynamics: Frequency-Selective Spiking Reservoirs
-with Resonant Neurons**, Aurora Micheli, Claudio Gallicchio, Nergis Tomen,
-NeurIPS 2026.
+Code for **[Beyond Low-Pass Dynamics: Frequency-Selective Spiking Reservoirs
+with Resonant Neurons](https://arxiv.org/abs/2610.37906)**, Aurora Micheli,
+Claudio Gallicchio, Nergis Tomen, NeurIPS 2026.
 
 HRF-Res is a liquid state machine in which a LIF encoder drives a reservoir of
 Harmonic Resonate-and-Fire (HRF) neurons. Unlike leaky integrate-and-fire
@@ -140,7 +141,9 @@ configs/        one YAML file per experiment
   title     = {Beyond Low-Pass Dynamics: Frequency-Selective Spiking Reservoirs with Resonant Neurons},
   author    = {Micheli, Aurora and Gallicchio, Claudio and Tomen, Nergis},
   booktitle = {Advances in Neural Information Processing Systems},
-  year      = {2026}
+  year      = {2026},
+  eprint    = {2610.37906},
+  archivePrefix = {arXiv}
 }
 ```
 
